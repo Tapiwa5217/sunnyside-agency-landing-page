@@ -68,13 +68,13 @@ img {
 }
 
 .header nav .menu-list li {
-  padding: 20px 0;
   transition: all ease .8s;
   transform: translateX(100%);
   cursor: pointer;
 }
 
 .header nav .menu-list li a {
+  padding: 20px 0;
   color: #333;
   text-decoration: none;
 }
@@ -348,18 +348,21 @@ img {
     transition: unset;
   }
   .header nav .menu-list li {
-    padding: 20px 20px;
     transition: unset;
     transform: unset;
   }
-  .header nav .menu-list .activated {
+  .header nav .menu-list li a {
+    padding: 20px 20px;
+    color: #fff;
+  }
+  .header nav .menu-list li .activated {
     font-family: 'Fraunces', serif;
     text-transform: uppercase;
     color: #333;
     position: relative;
     z-index: 5;
   }
-  .header nav .menu-list .activated::after {
+  .header nav .menu-list li .activated::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -371,10 +374,10 @@ img {
     z-index: -1;
     border-radius: 50px;
   }
-  .header nav .menu-list .activated:hover {
+  .header nav .menu-list li .activated:hover {
     color: #fff;
   }
-  .header nav .menu-list .activated:hover::after {
+  .header nav .menu-list li .activated:hover::after {
     opacity: .5;
   }
   .header .hero-section {
